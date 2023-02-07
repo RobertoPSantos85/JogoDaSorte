@@ -1,2 +1,3 @@
 # JogoDaSorte
-Jogo desenvolvido para a aplicação da classe Random do .NET
+Teste a sua sorte neste jogo! ;)
+Utilize o jogo no Windows 10 ou 11
