@@ -1,0 +1,12 @@
+C:\Git\JogoDaSorte\JogoDaSorte\bin\Debug\JogoDaSorte.exe.config
+C:\Git\JogoDaSorte\JogoDaSorte\bin\Debug\JogoDaSorte.exe
+C:\Git\JogoDaSorte\JogoDaSorte\bin\Debug\JogoDaSorte.pdb
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.csproj.AssemblyReference.cache
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.FrmBemVindo.resources
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.Properties.Resources.resources
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.csproj.GenerateResource.cache
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.csproj.CoreCompileInputs.cache
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.exe
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.pdb
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.FrmJogo.resources
+C:\Git\JogoDaSorte\JogoDaSorte\obj\Debug\JogoDaSorte.csproj.SuggestedBindingRedirects.cache
