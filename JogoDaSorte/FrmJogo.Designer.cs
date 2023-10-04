@@ -104,6 +104,7 @@ namespace JogoDaSorte
             this.TxtN6.Name = "TxtN6";
             this.TxtN6.Size = new System.Drawing.Size(78, 20);
             this.TxtN6.TabIndex = 6;
+            this.TxtN6.Leave += new System.EventHandler(this.TxtN6_Leave);
             // 
             // TxtN2
             // 
@@ -111,6 +112,7 @@ namespace JogoDaSorte
             this.TxtN2.Name = "TxtN2";
             this.TxtN2.Size = new System.Drawing.Size(78, 20);
             this.TxtN2.TabIndex = 2;
+            this.TxtN2.Leave += new System.EventHandler(this.TxtN2_Leave);
             // 
             // TxtN1
             // 
@@ -118,6 +120,7 @@ namespace JogoDaSorte
             this.TxtN1.Name = "TxtN1";
             this.TxtN1.Size = new System.Drawing.Size(78, 20);
             this.TxtN1.TabIndex = 1;
+            this.TxtN1.Leave += new System.EventHandler(this.TxtN1_Leave);
             // 
             // TxtN4
             // 
@@ -125,6 +128,7 @@ namespace JogoDaSorte
             this.TxtN4.Name = "TxtN4";
             this.TxtN4.Size = new System.Drawing.Size(78, 20);
             this.TxtN4.TabIndex = 4;
+            this.TxtN4.Leave += new System.EventHandler(this.TxtN4_Leave);
             // 
             // TxtN3
             // 
@@ -132,6 +136,7 @@ namespace JogoDaSorte
             this.TxtN3.Name = "TxtN3";
             this.TxtN3.Size = new System.Drawing.Size(78, 20);
             this.TxtN3.TabIndex = 3;
+            this.TxtN3.Leave += new System.EventHandler(this.TxtN3_Leave);
             // 
             // TxtN5
             // 
@@ -139,6 +144,7 @@ namespace JogoDaSorte
             this.TxtN5.Name = "TxtN5";
             this.TxtN5.Size = new System.Drawing.Size(78, 20);
             this.TxtN5.TabIndex = 5;
+            this.TxtN5.Leave += new System.EventHandler(this.TxtN5_Leave);
             // 
             // FrmJogo
             // 
@@ -157,6 +163,7 @@ namespace JogoDaSorte
             this.Controls.Add(this.LblNumeros);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmJogo";
             this.Text = "Jogue agora!!!";
             this.Load += new System.EventHandler(this.FrmJogo_Load);

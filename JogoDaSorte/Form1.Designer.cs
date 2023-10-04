@@ -78,6 +78,7 @@ namespace JogoDaSorte
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmBemVindo";
             this.Text = "Bem Vindo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

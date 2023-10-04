@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace JogoDaSorte
             TxtN1.Focus();
         }
 
+        ValidaDados valida = new ValidaDados();
+
         private void BtnSorteio_Click(object sender, EventArgs e)
         {
            
@@ -39,57 +42,123 @@ namespace JogoDaSorte
                 apostas[4] = int.Parse(TxtN5.Text);
                 apostas[5] = int.Parse(TxtN6.Text);
 
-                foreach(int aposta in apostas)
+                if(valida.ValidaAposta(apostas) == true)
                 {
-                    if((aposta < 0) || (aposta > 60 ))
-                    {
-                        MessageBox.Show("Digite números dentro do intervalo de 00 à 60");
-                    }
+                    MessageBox.Show("Certifique - se que não há repetição de números na aposta.");
                 }
-                
-                Random sorte = new Random();
-                int[] sorteios = new int[6];
-                int acerto = 0;
-
-                for (int i = 0; i < 6; i++)
+                else
                 {
-                    sorteios[i] = sorte.Next(0, 61);
-                }
-
-                foreach (int aposta in apostas)
-                    foreach (int sorteio in sorteios)
+                    
+                    if(valida.ValidaAposta(Sorteio()) == false)
                     {
-                        if (sorteio == aposta)
-                        {
-                            acerto++;
-                        }
-                    }
-                LblNumeros.Text = sorteios[0] + " " + sorteios[1] + " " + sorteios[2] + " " + sorteios[3] + " " + sorteios[4] + " "
-                    + sorteios[5];
+                        int[] sorteios = Sorteio();
+                        int acerto = 0;
+                        foreach (int aposta in apostas)
+                            foreach(int sorteio in sorteios)
+                            {
+                                if (sorteio == aposta)
+                                {
+                                    acerto++;
+                                }
+                            }
+                        LblNumeros.Text = sorteios[0] + " " + sorteios[1] + " " + sorteios[2] + " " + sorteios[3] + " " + sorteios[4] + " "
+                            + sorteios[5];
 
-                MessageBox.Show("Você acertou: " + acerto);
+                        MessageBox.Show("Você acertou: " + acerto);
+                        BtnSorteio.Enabled = false;
+                        
+                    }
+                    else
+                    {
+                        Sorteio();
+                    }
+
+                    
+                }
             }
             catch(Exception)
             {
-                MessageBox.Show("Ops! Certifique - se de que foram digitados apenas números dentro do intervalo de 0 a 60");
+                MessageBox.Show("Ops! Ocorreu um erro inesperado!");
             }
-
-            
-
-            
-
-            
         }
 
         private void BtnLimpar_Click(object sender, EventArgs e)
         {
             TxtN1.Clear();
+            TxtN1.Focus();
             TxtN2.Clear();
             TxtN3.Clear();
             TxtN4.Clear();
             TxtN5.Clear();
             TxtN6.Clear();
             LblNumeros.Text = " ";
+            BtnSorteio.Enabled = true; 
+        }
+
+       
+
+        private void TxtN1_Leave(object sender, EventArgs e)
+        { 
+            
+            if (valida.ValidaCampo(TxtN1.Text) == false)
+            {
+                TxtN1.Focus();
+            }
+        }
+
+        private void TxtN2_Leave(object sender, EventArgs e)
+        {
+            if (valida.ValidaCampo(TxtN2.Text) == false)
+            {
+                TxtN2.Focus();
+            }
+        }
+
+        private void TxtN3_Leave(object sender, EventArgs e)
+        {
+            if (valida.ValidaCampo(TxtN3.Text) == false)
+            {
+                TxtN3.Focus();
+            }
+        }
+
+        private void TxtN4_Leave(object sender, EventArgs e)
+        {
+            if (valida.ValidaCampo(TxtN4.Text) == false)
+            {
+                TxtN4.Focus();
+            }
+        }
+
+        private void TxtN5_Leave(object sender, EventArgs e)
+        {
+            if (valida.ValidaCampo(TxtN5.Text) == false)
+            {
+                TxtN5.Focus();
+            }
+        }
+
+        private void TxtN6_Leave(object sender, EventArgs e)
+        {
+            if (valida.ValidaCampo(TxtN6.Text) == false)
+            {
+                TxtN6.Focus();
+            }
+        }
+
+        
+
+        public int[] Sorteio()
+        {
+            Random sorte = new Random();
+            int[] sorteios = new int[6];
+
+            for (int i = 0; i < 6; i++)
+            {
+                sorteios[i] = sorte.Next(0, 61);
+            }
+
+            return sorteios;
         }
     }
 }
